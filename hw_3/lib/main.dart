@@ -12,7 +12,8 @@ void main() {
         title: Text(
           "Dice",
           style: TextStyle(
-            fontSize: 22,
+            fontFamily: "Pacifico",
+            fontSize: 33,
             color: Colors.white,
           ),
         ),
@@ -35,7 +36,7 @@ class _DicePageState extends State<DicePage> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Row(
+      child:Row(
         children: [
           Expanded(
               flex: 1,
@@ -45,7 +46,6 @@ class _DicePageState extends State<DicePage> {
                       leftDice = Random().nextInt(6)+1;
                     });
 
-                    print(leftDice);
                   },
                   child: Image.asset("images/dice$leftDice.png"))),
           Expanded(
@@ -56,7 +56,6 @@ class _DicePageState extends State<DicePage> {
                       rightDice = Random().nextInt(6)+1;
                     });
 
-                    print(rightDice);
                   },
                   child: Image.asset("images/dice$rightDice.png")))
         ],
